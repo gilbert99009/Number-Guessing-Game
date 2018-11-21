@@ -46,14 +46,12 @@ Welcome to the Number Guessing Game!
 
     while True:
         # ask the user if he/she wants to restart the game
-        restart_game = input("""You got it! Would you like to play again? (Y/N)     """)
+        restart_game = input("You got it! Would you like to play again? (Y/N)     ")
         if restart_game.lower() == "y":
             inner_play(highscore)
         if restart_game.lower() == "n":
             print("GAME ENDING!")
             break
-        else:
-            print("Please enter [Y]es/[N]o!")
 
 if __name__ == '__main__':
     # Kick off the program by calling the start_game function.
