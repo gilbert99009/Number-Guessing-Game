@@ -19,7 +19,7 @@ Welcome to the Number Guessing Game!
         while bool(initialize) == True:
             try:
                 guess = int(input("Please guess a number from 1 - 10:      "))
-                if guess > 10 or guess < 0:
+                if guess > 10 or guess <= 0:
                     raise ValueError
             except ValueError:
                 print("Please enter a valid number from 1 - 10!")
@@ -34,7 +34,7 @@ Welcome to the Number Guessing Game!
                 continue
             elif guess == answer:
                 print("Number of tries took:  {}!".format(len(list_of_guesses)))
-
+                print("The winning number is {}!".format(answer))
                 if len(list_of_guesses) < min(highscore):
                     highscore.append(len(list_of_guesses))
                     print("New highscore!")
@@ -46,8 +46,7 @@ Welcome to the Number Guessing Game!
 
     while True:
         # ask the user if he/she wants to restart the game
-        restart_game = input("""You got it!
-        Would you like to play again? (Y/N)     """)
+        restart_game = input("""You got it! Would you like to play again? (Y/N)     """)
         if restart_game.lower() == "y":
             inner_play(highscore)
         if restart_game.lower() == "n":
