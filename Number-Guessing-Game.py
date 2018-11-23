@@ -52,6 +52,8 @@ Welcome to the Number Guessing Game!
         if restart_game.lower() == "n":
             print("GAME ENDING!")
             break
+#       else:
+#         print("Please type in [Y]es/[N]o")
 
 if __name__ == '__main__':
     # Kick off the program by calling the start_game function.
